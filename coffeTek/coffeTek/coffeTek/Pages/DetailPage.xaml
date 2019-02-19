@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="coffeTek.Pages.DetailPage"
+             Title="Detalhes">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" AbsoluteLayout.LayoutBounds="0.1, 0.1, 100, 100" >
+            <Image x:Name="imagen"
+                   WidthRequest="45" 
+                   HeightRequest="60" 
+                   MinimumHeightRequest="45" 
+                   MinimumWidthRequest="50" 
+                   HorizontalOptions="Center" 
+                   Aspect="Fill"  
+                   VerticalOptions="Center"
+                   Margin="20, 20, 20, 20"
+            />
+            <ScrollView>
+                <StackLayout>
+                    <Frame Padding="15, 5, 15, 5" HeightRequest="55" MinimumHeightRequest="55">
+                        <StackLayout Orientation="Vertical">
+                            <Label x:Name="product_name"
+                                   VerticalOptions="Start" 
+                                   FontAttributes="Bold"
+                                   FontSize="17"
+                                   HorizontalOptions="Start" 
+                            />
+                            <Label x:Name="medida"
+                                   FontSize="15"
+                                   HorizontalOptions="Start" 
+                            />
+                        </StackLayout>
+                    </Frame>
+                    <Frame Padding="10, 0, 10, 0" HeightRequest="60" MinimumHeightRequest="60">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Tamanho"
+                                   VerticalOptions="Center"
+                                   FontSize="12"
+                                   HorizontalOptions="Start"
+                                   MinimumWidthRequest="80"
+                                   WidthRequest="80"
+                            />
+                            <StackLayout Orientation="Horizontal" Margin="0, 15, 0, 15">
+                                <Image x:Name="tamanho150"
+                                       Source="cup" 
+                                       HeightRequest="20"
+                                       WidthRequest="20"
+                                       MinimumHeightRequest="20"
+                                       MinimumWidthRequest="20"
+                                       VerticalOptions="End"
+                                 />
+                                <Image x:Name="tamanho200"
+                                       Source="cup"
+                                       HeightRequest="22"
+                                       WidthRequest="22"
+                                       MinimumHeightRequest="22"
+                                       MinimumWidthRequest="22"
+                                       VerticalOptions="End"
+                                 />
+                                <Image x:Name="tamanho250"
+                                       Source="cup" 
+                                       HeightRequest="25"
+                                       WidthRequest="25"
+                                       MinimumHeightRequest="25"
+                                       MinimumWidthRequest="25"
+                                       VerticalOptions="End"
+                                 />
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Padding="15, 5, 15, 5" HeightRequest="60" MinimumHeightRequest="60">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Açucar"
+                                   VerticalOptions="Center"
+                                   FontSize="12"
+                                   HorizontalOptions="Start"
+                                   MinimumWidthRequest="80"
+                                   WidthRequest="80"
+                            />
+                            <StackLayout Orientation="Horizontal" Margin="0, 15, 0, 15" VerticalOptions="Center">
+                                <Image x:Name="no_sugar"
+                                       Source="no_sugar" 
+                                       HeightRequest="20"
+                                       WidthRequest="20"
+                                       MinimumHeightRequest="20"
+                                       MinimumWidthRequest="20"
+                                       VerticalOptions="End"
+                                       Aspect="Fill"
+                                 />
+                                <Image x:Name="sugar1"
+                                       Source="sugar1"
+                                       HeightRequest="13"
+                                       WidthRequest="13"
+                                       MinimumHeightRequest="13"
+                                       MinimumWidthRequest="13"
+                                       VerticalOptions="End"
+                                       Aspect="Fill"
+                                 />
+                                <Image x:Name="sugar2"
+                                       Source="sugar2" 
+                                       HeightRequest="15"
+                                       WidthRequest="18"
+                                       MinimumHeightRequest="15"
+                                       MinimumWidthRequest="18"
+                                       VerticalOptions="End"
+                                       Aspect="Fill"
+                                 />
+                                <Image x:Name="sugar3"
+                                       Source="sugar3" 
+                                       HeightRequest="20"
+                                       WidthRequest="20"
+                                       MinimumHeightRequest="20"
+                                       MinimumWidthRequest="20"
+                                       VerticalOptions="End"
+                                       Aspect="Fill"
+                                 />
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Padding="15, 5, 15, 5" HeightRequest="60" MinimumHeightRequest="60">
+                        <StackLayout Orientation="Horizontal" x:Name="adicionais">
+                            <Label Text="Adicionais"
+                                   VerticalOptions="Center"
+                                   FontSize="12"
+                                   HorizontalOptions="Start"
+                                   MinimumWidthRequest="80"
+                                   WidthRequest="80"
+                            />
+
+                        </StackLayout>
+                    </Frame>
+                    <Frame Padding="15, 5, 15, 5" HeightRequest="50" MinimumHeightRequest="50">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Quantidade"
+                                   VerticalOptions="Center"
+                                   FontSize="12"
+                                   HorizontalOptions="Start"
+                                   MinimumWidthRequest="80"
+                                   WidthRequest="80"
+                            />
+                            <StackLayout Margin="25, 0, 25, 0" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                <ImageButton 
+                                    Source="less"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    Clicked="OnHandleLess"
+                                    BackgroundColor="White"
+                                    Margin="10, 0 ,10, 0"
+                                    HeightRequest="25"
+                                    WidthRequest="25"
+                                    Padding="5, 5, 5, 5"
+                                    x:Name="less"
+                                />
+                                <Label Text="0" 
+                                       x:Name="quantidade"
+                                       FontSize="12"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                />
+                                <ImageButton 
+                                    Source="plus"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    Clicked="OnHandlePlus"
+                                    BackgroundColor="White"
+                                    Margin="10, 0 ,10, 0"
+                                    Padding="5, 5, 5, 5"
+                                    HeightRequest="25"
+                                    WidthRequest="25"
+                                />
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    <StackLayout>
+                        <Button Text="Colocar no carrinho"
+                                BackgroundColor="SandyBrown"
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalOptions="Center"
+                                Clicked="OnHandleAddCart" 
+                        />
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

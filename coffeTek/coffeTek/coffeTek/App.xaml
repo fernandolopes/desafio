@@ -3,6 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="coffeTek.App">
     <Application.Resources>
-
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="#FFF"/>
+            <Setter Property="BarTextColor" Value="#000"/>
+            <Setter Property="BackButtonTitle" Value="#000" />
+        </Style>
+        <Style TargetType="ContentPage">
+            <Setter Property="NavigationPage.BackButtonTitle" Value="#000" />
+        </Style>
     </Application.Resources>
 </Application>

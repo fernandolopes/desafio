@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:desafio"
+             x:Class="coffeTek.Pages.MainPage"
+             Title="Menu"
+>
+
+    <StackLayout>
+        <!-- Place new controls here -->
+
+        <ListView  x:Name="lstView" RowHeight="60" ItemSelected="OnItemSelected">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" BackgroundColor="White">
+                            
+                            <Image Source="{Binding Image}"
+                                   WidthRequest="25" 
+                                   HeightRequest="25" 
+                                   MinimumHeightRequest="25" 
+                                   MinimumWidthRequest="25" 
+                                   HorizontalOptions="Start" 
+                                   Aspect="Fill"  
+                                   VerticalOptions="Center"
+                                   Margin="10, 10, 10, 10"
+                            />
+
+                            <Label Text="{Binding Title}" FontSize="18" VerticalOptions="Center" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

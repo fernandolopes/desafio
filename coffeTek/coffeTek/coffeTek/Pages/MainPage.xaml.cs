@@ -19,7 +19,10 @@ namespace coffeTek.Pages
         {
             InitializeComponent();
 
-            
+            ToolbarItems.Add(new ToolbarItem("Cart", "shopping_cart.png", () =>
+            {
+                Navigation.PushAsync(new Cart());
+            }));
 
             Productions = GetProducts();
             lstView.ItemsSource = Productions;
@@ -29,6 +32,7 @@ namespace coffeTek.Pages
         {
             var item = e.SelectedItem as ProductViewModel;
             // Your code here
+            Navigation.PushAsync(new DetailPage(item));
         }
 
         private ObservableCollection<ProductViewModel> GetProducts()
@@ -47,6 +51,7 @@ namespace coffeTek.Pages
             }
             catch (Exception)
             {
+                //TODO - Falta abrir uma janela de warn para o usuario.
                 return null;
             }
         }

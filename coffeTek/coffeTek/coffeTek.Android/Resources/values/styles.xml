@@ -9,7 +9,7 @@
   </style>
 
   <style name="MainTheme" parent="MainTheme.Base">
-    
+
   </style>
 
   <style name="MyBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -30,7 +30,7 @@
   <style name="MyTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
     <item name="android:textColor">#000</item>
   </style>
-  
+
   <style name="MyBaseTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
   <style name="MyBaseTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
@@ -51,7 +51,7 @@
   <style name="tab" parent="@style/Widget.AppCompat.Light.ActionBar.TabText">
     <item name="android:textAllCaps">false</item>
   </style>
-  
+
   <!-- Base theme applied no matter what API -->
   <style name="MainTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
     <!--If you are using revision 22.1 please use just windowNoTitle. Without android:-->

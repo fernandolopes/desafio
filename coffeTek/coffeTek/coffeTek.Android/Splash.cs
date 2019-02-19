@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace desafio.Droid
+namespace coffeTek.Droid
 {
     [Activity(Theme = "@style/Theme.Splash", MainLauncher = true, NoHistory = true)]
     public class Splash : Activity

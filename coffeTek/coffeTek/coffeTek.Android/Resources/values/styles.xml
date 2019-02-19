@@ -1,8 +1,57 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
 
-  <style name="MainTheme" parent="MainTheme.Base">
+  <style name="Theme.Splash" parent="android:Theme">
+    <item name="android:windowBackground">@drawable/splash</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowFullscreen">true</item>
+    <item name="colorPrimaryDark">#313131</item>
   </style>
+
+  <style name="MainTheme" parent="MainTheme.Base">
+    
+  </style>
+
+  <style name="MyBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Override the app bar color -->
+    <item name="colorPrimary">#FFF</item>
+    <item name="colorPrimaryDark">#FFF</item>
+    <!-- Override the color of UI controls -->
+    <item name="android:colorAccent">#5d5d5d</item>
+
+    <item name="actionBarStyle">@style/ActionBarStyle</item>
+    <item name="android:textColorHint">#000</item>
+    <item name="actionBarTabTextStyle">@style/tab</item>
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <item name="titleTextStyle">@style/MyTitleTextStyle</item>
+  </style>
+
+  <style name="MyTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+    <item name="android:textColor">#000</item>
+  </style>
+  
+  <style name="MyBaseTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+  <style name="MyBaseTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+  <style name="MyBaseTheme.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+  </style>
+
+  <style name="MyAppTheme" parent="MyBaseTheme">
+
+  </style>
+
+  <style name="ActionBarStyle" parent="Widget.AppCompat.ActionBar.Solid">
+    <item name="elevation">0dp</item>
+  </style>
+
+  <style name="tab" parent="@style/Widget.AppCompat.Light.ActionBar.TabText">
+    <item name="android:textAllCaps">false</item>
+  </style>
+  
   <!-- Base theme applied no matter what API -->
   <style name="MainTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
     <!--If you are using revision 22.1 please use just windowNoTitle. Without android:-->
@@ -22,6 +71,10 @@
     <item name="windowActionModeOverlay">true</item>
 
     <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
+  </style>
+
+  <style name="MyActionBar" parent="MainTheme.Base">
+    <item name="android:background">#FFF</item>
   </style>
 
   <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
